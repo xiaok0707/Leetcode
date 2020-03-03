@@ -2,15 +2,7 @@
 
 令 $dp[i][j]$ 表示字符串 $s[i...j]$ 是否为回文串，有如下递推公式
 
-$$dp[i][j]=
-\begin{equation}
-\left\{
-             \begin{array}{l}
-             true & dp[i+1][j-1]=true \and s[i]=s[j] \\  
-             false & else\\
-             \end{array}
-\right.
-\end{equation}$$
+$d p[i][j]=\left\{\begin{array}{ll}\text { true } & d p[i+1][j-1]=\text { true } \wedge s[i]=s[j] \\ \text { false } & \text { else }\end{array}\right.$
 
 初始化所有的 $dp[i][i]=true,dp[i][i+1]=(s[i]=s[j]?true:false)$，然后进行递推，最后双重循环遍历所有子串，确定最长回文子串。
 
