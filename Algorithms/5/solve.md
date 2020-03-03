@@ -2,11 +2,12 @@
 
 令 $dp[i][j]$ 表示字符串 $s[i...j]$ 是否为回文串，有如下递推公式
 $$
-dp[i][j]=\begin{equation}
+dp[i][j]=
+\begin{equation}
 \left\{
              \begin{array}{l}
-             true, & dp[i+1][j-1]=true \  \and \ s[i]=s[j] \\  
-             false, & else\\  
+             true & dp[i+1][j-1]=true \and s[i]=s[j] \\  
+             false & else\\
              \end{array}
 \right.
 \end{equation}
@@ -136,7 +137,7 @@ class Solution:
 
 可以推算得到一个非常神奇的结论，算法的关键点就在这里：
 
-如果 $mx > i$，那么 $P[i] >= min(P[2*id- i], mx-i)，2*id-i$ 指 $i$ 关于 $id$ 的对称点，也就是 $id-(i-id)=2*id-i$，便于理解，也可以这样来写：
+如果 $mx > i$，那么 $P[i] >= min(P[2*id- i], mx-i),2*id-i$ 指 i 关于 id 的对称点，也就是 $id-(i-id)=2*id-i$，便于理解，也可以这样来写：
 
 ```c++
 if(P[2*id-i]<mx-i)
