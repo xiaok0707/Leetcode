@@ -2,14 +2,13 @@
 
 令 $dp[i][j]$ 表示字符串 $s[i...j]$ 是否为回文串，有如下递推公式
 $$
-dp[i][j]=
-\begin{equation}  
-\left\{  
-             \begin{array}  
+dp[i][j]=\begin{equation}
+\left\{
+             \begin{array}{l}
              true, & dp[i+1][j-1]=true \  \and \ s[i]=s[j] \\  
              false, & else\\  
-             \end{array}  
-\right.  
+             \end{array}
+\right.
 \end{equation}
 $$
 初始化所有的 $dp[i][i]=true,dp[i][i+1]=(s[i]=s[j]?true:false)$，然后进行递推，最后双重循环遍历所有子串，确定最长回文子串。
@@ -129,6 +128,7 @@ class Solution:
 然后用一个数组 P[i] 来记录以字符 S[i] 为中心的最长回文子串向左右扩展的长度（包含 S[i] ）
 
 > `S # 1 # 2 # 2 # 1 # 2 # 3 # 2 # 1 #`
+>
 > `P 1 2 1 2 5 2 1 4 1 2 1 6 1 2 1 2 1`
 > (p.s. 可以看出，P[i]-1正好是原字符串中回文串的总长度）
 
@@ -136,7 +136,7 @@ class Solution:
 
 可以推算得到一个非常神奇的结论，算法的关键点就在这里：
 
-如果 $mx > i$，那么 $P[i] >= min(P[2*id- i], mx-i)$，$2*id-i$ 指 $i$ 关于 $id$ 的对称点，也就是 $id-(i-id)=2*id-i$，便于理解，也可以这样来写：
+如果 $mx > i$，那么 $P[i] >= min(P[2*id- i], mx-i)，2*id-i$ 指 $i$ 关于 $id$ 的对称点，也就是 $id-(i-id)=2*id-i$，便于理解，也可以这样来写：
 
 ```c++
 if(P[2*id-i]<mx-i)
