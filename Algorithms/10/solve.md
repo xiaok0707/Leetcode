@@ -3,12 +3,11 @@
 令 $dp[i][j]$ 表示 $s[0,i-1]$ 与 $p[0,j-1]$ 是否匹配，则有如下递推公式.
 $$
 dp[i][j]=\left\{
-\begin{aligned}
-dp[i-1][j-1] & & (s[i-1]=p[j-1] \ or \ p[j-1]='.')  \\
-dp[i][j-2] & & (p[j-1]='*') \\
-dp[i-1][j] & & (p[j-1]='*' \ and \ (p[j-2]=s[i-1] \ or \ p[j-2]='.' ))
-\end{aligned}
-\right.
+\begin{array}{rcl}
+dp[i-1][j-1] && { (s[i-1]=p[j-1] \ or \ p[j-1]='.')}\\
+dp[i][j-2] && {(p[j-1]='*')}\\
+dp[i-1][j] && {(p[j-1]='*' \ and \ (p[j-2]=s[i-1] \ or \ p[j-2]='.' ))}\\
+\end{array} \right. 
 $$
 第二行表示 $p[j-1]$ 起到重复0次的作用，意思是$p[j-2]$ 这个字符出现了0次
 
