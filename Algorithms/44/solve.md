@@ -5,14 +5,8 @@
 使用动态规划法，思路和 [Leetcode 4](https://leetcode-cn.com/problems/median-of-two-sorted-arrays) 基本相同.
 
 设 $dp[i][j]$ 表示 $s[0...i-1]$ 和 $p[0...j-1]$ 是否匹配，那么有如下递推公式.
-$$
-dp[i][j]=\left\{
-\begin{aligned}
-dp[i-1][j-1] &  & s_{i-1}=p_{j-1} \ or \ p_{j-1}='?'  \\
-dp[i][j-1] \ or \ dp[i-1][j] & & p_{j-1}='*' 
-\end{aligned}
-\right.
-$$
+
+![2020-04-01_180318.png](https://i.loli.net/2020/04/01/AmBVl6C8SbrcZzK.png)
 
 ### C++
 
