@@ -15,14 +15,18 @@ class Solution {
             ans.add(e);
             return;
         }
+        HashMap<Integer,Boolean> mp=new HashMap<>();
         for(int i=pos;i<n;++i){
             swap(pos,i);
-            dfs(pos+1);
+            if(!mp.getOrDefault(nums[pos],false)){
+                mp.put(nums[pos],true);
+                dfs(pos+1);
+            }
             swap(pos,i);
         }
     }
 
-    public List<List<Integer>> permute(int[] nums) {
+    public List<List<Integer>> permuteUnique(int[] nums) {
         this.n=nums.length;
         this.nums=nums;
         dfs(0);

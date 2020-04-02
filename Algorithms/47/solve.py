@@ -12,9 +12,11 @@ def nextPermutation(nums: List[int]) -> bool:
     return True
 
 class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
+    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
         nums.sort()
         ans=[nums[:]]
+        print(nums)
         while nextPermutation(nums):
             ans.append(nums[:])
+            print(nums)
         return ans
