@@ -14,32 +14,18 @@ $dp[i][j]$ 表示将 $word1[0...i-1]$ 转换为 $word2[0...j-1]$ 的最少次数
 
 ```python
 class Solution:
-    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
-        if len(matrix)==0: return []
-        ans=[]
-        start_row,end_row=0,len(matrix)-1
-        start_col,end_col=0,len(matrix[0])-1
-        while start_row<=end_row and start_col<=end_col:
-            if start_row==end_row:
-                i=start_row
-                for j in range(start_col,end_col+1): ans.append(matrix[i][j])
-                break
-            if start_col==end_col:
-                j=start_col
-                for i in range(start_row,end_row+1): ans.append(matrix[i][j])
-                break
-            i=start_row
-            for j in range(start_col,end_col): ans.append(matrix[i][j])
-            j=end_col
-            for i in range(start_row,end_row): ans.append(matrix[i][j])
-            i=end_row
-            for j in range(end_col,start_col,-1): ans.append(matrix[i][j])
-            j=start_col
-            for i in range(end_row,start_row,-1): ans.append(matrix[i][j])
-            start_row+=1
-            end_row-=1
-            start_col+=1
-            end_col-=1
-        return ans
+    def minDistance(self, word1: str, word2: str) -> int:
+        n,m=len(word1),len(word2)
+        dp=[[0 for j in range(m+1)] for i in range(n+1)]
+        for i in range(n+1): dp[i][0]=i
+        for j in range(m+1): dp[0][j]=j
+        for i in range(1,n+1):
+            for j in range(1,m+1):
+                if word1[i-1]==word2[j-1]:
+                    dp[i][j]=dp[i-1][j-1]
+                else:
+                    dp[i][j]=min(dp[i][j-1],dp[i-1][j],dp[i-1][j-1])+1
+        return dp[n][m]
+
 ```
 
