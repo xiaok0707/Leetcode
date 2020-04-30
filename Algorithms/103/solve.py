@@ -6,7 +6,7 @@
 #         self.right = None
 
 class Solution:
-    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+    def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
         if root is None: return []
         que,ans,floor=[root],[],0
         while len(que)>0:
@@ -16,6 +16,7 @@ class Solution:
                 res.append(tp.val)
                 if tp.left: que.append(tp.left)
                 if tp.right: que.append(tp.right)
+            if floor%2==1: res=res[::-1]
             ans.append(res)
             floor+=1
         return ans

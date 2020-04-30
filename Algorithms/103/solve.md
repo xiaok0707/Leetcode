@@ -1,6 +1,6 @@
 ## 思路
 
-用一个变量记录层数，使用队列BFS.
+用一个变量记录层数，使用队列BFS，层数为奇数时将该层BFS序列翻转.
 
 ### Python
 
@@ -13,7 +13,7 @@
 #         self.right = None
 
 class Solution:
-    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+    def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
         if root is None: return []
         que,ans,floor=[root],[],0
         while len(que)>0:
@@ -23,6 +23,7 @@ class Solution:
                 res.append(tp.val)
                 if tp.left: que.append(tp.left)
                 if tp.right: que.append(tp.right)
+            if floor%2==1: res=res[::-1]
             ans.append(res)
             floor+=1
         return ans
