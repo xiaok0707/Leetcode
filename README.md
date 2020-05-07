@@ -121,4 +121,6 @@
 |  113  | [ Path Sum II](https://leetcode-cn.com/problems/path-sum-ii) | [Thought](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/113/solve.md) | [C++](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/113/solve.cpp) |   Medium   |
 |  114  | [Flatten Binary Tree to Linked List](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list) | [Thought](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/114/solve.md) | [C++](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/114/solve.cpp) |   Medium   |
 |  115  | [ Distinct Subsequences](https://leetcode-cn.com/problems/distinct-subsequences) | [Thought](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/115/solve.md) | [Python](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/115/solve.py) |    Hard    |
+|  116  | [ Populating Next Right Pointers in Each Node](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node) | [Thought](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/116/solve.md) | [C++](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/116/solve.cpp) |   Medium   |
+|  117  |                                                              |                                                              |                                                              |            |
 
