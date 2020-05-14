@@ -133,4 +133,5 @@
 |  125  | [ Valid Palindrome](https://leetcode-cn.com/problems/valid-palindrome) | [Thought](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/125/solve.md) | [Python](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/125/solve.py) |    Easy    |
 |  126  | ★ [Word Ladder II](https://leetcode-cn.com/problems/word-ladder-ii) | [Thought](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/126/solve.md) | [Python](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/126/solve.py) |    Hard    |
 |  127  | ★ [ Word Ladder](https://leetcode-cn.com/problems/word-ladder) | [Thought](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/127/solve.md) | [Python](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/127/solve.py) |   Medium   |
+|  128  | ★ [ Longest Consecutive Sequence](https://leetcode-cn.com/problems/longest-consecutive-sequence) | [Thought](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/128/solve.md) | [C++](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/128/solve.cpp) |    Hard    |
 
