@@ -137,4 +137,5 @@
 |  129  | [ Sum Root to Leaf Numbers](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers) | [Thought](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/129/solve.md) | [C++](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/129/solve.cpp) |   Medium   |
 |  130  | [Surrounded Regions](https://leetcode-cn.com/problems/surrounded-regions) | [Thought](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/130/solve.md) | [C++](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/130/solve.cpp) |   Medium   |
 |  131  | [ Palindrome Partitioning](https://leetcode-cn.com/problems/palindrome-partitioning) | [Thought](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/131/solve.md) | [Python](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/131/solve.py) |   Medium   |
+|  132  | [ Palindrome Partitioning II](https://leetcode-cn.com/problems/palindrome-partitioning-ii) | [Thought](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/132/solve.md) | [Python](https://github.com/xiaok0707/Leetcode/blob/master/Algorithms/132/solve.py) |    Hard    |
 
