@@ -1,14 +1,13 @@
 class Solution {
 public:
-    int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
-        int n=gas.size(),sum=0,id=0,minsum=INT_MAX;
-        for(int i=0;i<n;++i){
-            sum+=gas[i]-cost[i];
-            if(sum<minsum){
-                id=i;
-                minsum=sum;
-            }
+    int singleNumber(vector<int>& nums) {
+        int one=0,two=0;
+        for(int now:nums){
+            int newone=~two & (now^one);
+            int newtwo=(one & now) | (~one & ~now & two);
+            one=newone;
+            two=newtwo;
         }
-        return sum>=0?(id+1)%n:-1;
+        return one;
     }
 };
